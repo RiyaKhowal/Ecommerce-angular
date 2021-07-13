@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"><nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1 text-center">Ecommerce</span>
+              <div > 
+                <button (click)="goToProductPanel()" class="btn btn-success" type="button" id="button-addon2">Product Panel</button>
+           
+                <button style="margin-left:10px" (click)="goToAdminPanel()" class="btn btn-success" type="button" id="button-addon2">Admin Panel</button>
+                <button style="margin-left:10px" (click)="goToAddProducts()" class="btn btn-success" type="button" id="button-addon2">Add Product</button>
+               </div> 
+            </div>
+            
+            
+          </nav></div>
+    </div>
+</div>
+<div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" >2021-2022</a>
+    </div>
+  </nav>

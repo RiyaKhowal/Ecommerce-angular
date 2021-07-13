@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row mt-2">
+    <div class="col"> <div class="input-group mb-3">
+      <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Products">
+      <button (click)="filterProducts()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+      <button (click)="clearSearch()" class="btn btn-outline-secondary" type="button" id="button-addon2">Clear</button>
+      </div>
+    </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col"  *ngFor="let item of filteredProductList" ><div class="card-group" >
+            <div class="card" (click)=" getProductDetails(item.id)">
+              <img src={{item.image}} class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+               <p> Quantity:{{item.quantity}}</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+           
+          </div></div>
+    </div>
+</div>

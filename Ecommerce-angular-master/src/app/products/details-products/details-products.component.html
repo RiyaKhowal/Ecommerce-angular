@@ -1,0 +1,34 @@
+
+    <div class="row mt-3">
+        <div class="col">
+            <h2>{{ productDecsription.name}}</h2>
+        </div>
+        <hr>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button (click)=" goBack()"class="btn btn-danger me-md-2" type="button">Back</button>
+       
+      </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+            <img src={{productDecsription.image}} class="card-img-top">
+</div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <h2><strong>Description</strong></h2>
+        <div class="col">{{ productDecsription.description}}</div>
+        
+      <div class="row mt-5">
+          <div class="col "><div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Add to Cart</button>
+            
+          </div></div>
+      </div>
+        </div>
+  </div>
+  
+</div>
+

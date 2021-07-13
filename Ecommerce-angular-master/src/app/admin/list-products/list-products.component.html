@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col">
+    <div class="alert alert-danger text-center mt-2 "  role="alert" >
+      <strong>Admin Panel</strong>
+     </div>
+  </div>
+</div>
+
+    
+           
+              
+              <div class="mt-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group mb-3">
+        <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Products">
+        <button (click)="filterProducts()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <button (click)="clearSearch()" class="btn btn-outline-secondary" type="button" id="button-addon2">Clear</button>
+        </div>
+        <hr>
+    </div>
+</div>
+   
+    <div class="row">
+        <div class="col">
+            <div class="row g-4">
+                <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col" class="indexMargin" >#</th>
+               
+                <th scope="col">ProductName</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Modify</th>
+                <th scope="col">image</th>
+                <th scope="col" class="gap">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of filteredProductList , let index=index">
+                <th scope="row" class="indexMargin">{{index+1}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.quantity}}</td>
+               <td> <button (click)="increaseProductQuantity(item)" class="btn btn-secondary" type="button" id="button-addon2">+</button>
+               <button  (click)=" decreaseProductQuantity(item)" class="btn btn-danger" type="button" id="button-addon2">-</button>
+               
+                <td class="product-image"><img src={{item.image}} class="card-img-top" alt="..."></td>
+                <td class="gap"><button (click)="deleteProduct(item)" class="btn btn-danger" type="button" id="button-addon2">Delete</button></td>
+              </tr>
+             
+            </tbody>
+          </table>
+  </div>
+        </div>
+        
+  

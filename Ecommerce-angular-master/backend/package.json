@@ -1,0 +1,14 @@
+{
+  "name": "backend-expresssjs",
+  "version": "1.0.0",
+  "description": "this is an expressjs backend server to support angular project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riya Khowal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
